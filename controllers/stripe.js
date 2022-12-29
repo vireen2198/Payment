@@ -6,12 +6,16 @@ const getPaymentLink=async (param)=>{
   try {
     const session=await stripe.checkout.sessions.create({
 
-      payment_method_types:['card'],
+      payment_method_types:['card',`wechat_pay`,`grabpay`],
       billing_address_collection:`required` , 
       invoice_creation: {
         enabled: true,
       },
+      currency: `MYR`,
       mode:'payment',
+      phone_number_collection: {
+        enabled: true
+      },
       success_url: `${process.env.DOMAIN}/paymentResponse/success.html`,
       cancel_url:`${process.env.DOMAIN}/notfound/not-found.html`,
       line_items: [
