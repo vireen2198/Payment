@@ -1,85 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>404 Error Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel = "icon" href ="../images/AAS.png"  type = "image/png">
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-        body{
-            font-family: 'Poppins', sans-serif;
-            background-color:#88efc8;
-            min-height:100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
-            background-size: 600% 600%;
-            background-repeat: no-repeat;
-            animation: gradient 16s linear infinite;
-            animation-direction: alternate;
-            scroll-behavior: smooth;
-        } 
-        .wrapper{
-            text-align: center;
-        }
-        .wrapper h2{
-            margin:40px 0;
-            font-size:2.5rem;
-        }
-        .wrapper img{
-            width:300px;
-            max-width:75%;
-        }
-        .wrapper h4{
-            margin:40px 0 20px;
-            font-size:1.2rem;
-        }
-        .main-btn{
-            padding:15px;
-            background-color: #6c63ff;
-            color:#fff;
-            border:none;
-            font-weight:700;
-            letter-spacing: 1px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        @keyframes gradient {
-            0% {background-position: 0%}
-            100% {background-position: 100%}
-        }
-        @media (max-width:767px){
-            .wrapper h2{ 
-                font-size:2rem;
-            }
-            .wrapper h4{ 
-                font-size:1rem;
-            }
-        }
-
-    </style>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../images/AAS.png" type="image/png" />
+    <link rel="stylesheet" href="./styles/not-found.css" />
+  </head>
+  <body>
     <div class="wrapper">
-        <h2>Oops! Page not found.</h2>
-        <div>
-            <img src="https://media3.giphy.com/media/Wv9kcISbTN0B2/200.gif" alt="404">
-        </div>
-        <h4>We can't find the page you're looking for.</h4>
-        <button type="button" class="main-btn">GO BACK HOME</button>
+      <h2>Oops! Page not found.</h2>
+      <div>
+        <img
+          src="https://media3.giphy.com/media/Wv9kcISbTN0B2/200.gif"
+          alt="404"
+        />
+      </div>
+      <h4>We can't find the page you're looking for.</h4>
+      <button type="button" class="main-btn">GO BACK HOME</button>
     </div>
-</body>
-<script>
-    const mainBtn=document.querySelector(".main-btn");
-    mainBtn,addEventListener("click",()=>{
-        return window.location.href="https://avtar-accommodation-solutions.herokuapp.com/"
-    })
-</script>
+  </body>
+  <script src="./javascripts/notFound.js"></script>
 </html>
-

@@ -1,7 +1,6 @@
-const express=require("express");
-const router=express.Router();
-const paymentMiddlewares=require("../middlewares/payment.js")
+const express = require("express");
+const router = express.Router();
+const paymentMiddlewares = require("../middlewares/payment.js");
 // router.use("payments/",);
-router.route("/clientIntentCode").post(paymentMiddlewares.clientPaymentIntent)
-router.route("/totalDue").post(paymentMiddlewares.clientTotalDue)
-module.exports=router
+router.route("/clientIntentCode").post(paymentMiddlewares.clientPaymentIntent);
+module.exports = router;
