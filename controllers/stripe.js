@@ -26,6 +26,7 @@ const getPaymentLink=async (param)=>{
         },
       ],
     })
+    throw new Error(session)
     return session.url
   } catch (error) {
     throw new Error(error)
