@@ -17,7 +17,7 @@ const getPaymentLink=async (param)=>{
       line_items: [
         {
           // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-          price:`price_1MJid2LHR7OpetQwNd1kEYP6`,
+          price:`price_1MJiAlLHR7OpetQwY1JbPECb`,
           quantity: 1,
         },
       ],
