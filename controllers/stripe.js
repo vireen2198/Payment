@@ -6,7 +6,7 @@ const getPaymentLink=async (param)=>{
   try {
     const session=await stripe.checkout.sessions.create({
 
-      payment_method_types:['card',`wechat_pay`,`grabpay`],
+      payment_method_types:['card',`grabpay`,`alipay`],
       billing_address_collection:`required` , 
       invoice_creation: {
         enabled: true,
@@ -17,7 +17,7 @@ const getPaymentLink=async (param)=>{
         enabled: true
       },
       success_url: `${process.env.DOMAIN}/paymentResponse/success.html`,
-      cancel_url:`${process.env.DOMAIN}/notfound/not-found.html`,
+      cancel_url:`${process.env.DOMAIN}/paymentResponse/cancel.html`,
       line_items: [
         {
           // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
@@ -28,7 +28,7 @@ const getPaymentLink=async (param)=>{
     })
     return session.url
   } catch (error) {
-    return error
+    throw new Error(error)
   }
 }
 
