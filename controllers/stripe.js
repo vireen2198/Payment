@@ -6,7 +6,7 @@ const getPaymentLink=async (param)=>{
   try {
     const session=await stripe.checkout.sessions.create({
 
-      payment_method_types:['card',`grabpay`,`alipay`],
+      payment_method_types:['card'],
       billing_address_collection:`required` , 
       invoice_creation: {
         enabled: true,
@@ -26,7 +26,6 @@ const getPaymentLink=async (param)=>{
         },
       ],
     })
-    throw new Error(session)
     return session.url
   } catch (error) {
     throw new Error(error)
